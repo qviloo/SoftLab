@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+<p>მაგალითი 1:
+    მოცემულია მასივი
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    .filter .forEach მეთოდების გამოყენებით დაწერეთ პროგრამა, რომელიც დაბეჭდავს ყველა ლუწ რიცხვს ამ მასივიდან.
+</p>
+<script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    numbers.filter(n => n % 2 === 0).forEach(n => {
+        document.writeln(n);
+        console.log(n);
+    })
+</script>
+</body>
+</html>
