@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+<p>მაგალითი 5:
+    const numbers = [-2, 0, 6, 3, -11, 4, -5, 10, 11, -1, 7, 9];
+    .filter .reduce მეთოდების გამოყენებით დაწერეთ პროგრამა, რომელიც დაბეჭდავს (კონსოლში) ამ რიცხვებიდან მხოლოდ დადებითების ჯამს.
+    პასუხი: 50
+
+
+</p>
+<script>
+    const numbers = [-2, 0, 6, 3, -11, 4, -5, 10, 11, -1, 7, 9];
+
+    let SUM=0;
+    numbers.filter(n => n > 0).reduce((sum, n)=>{
+        SUM=sum+n;
+        return SUM;
+    })
+        document.writeln(SUM);
+        console.log(SUM);
+
+</script>
+</body>
+</html>
