@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7</title>
+</head>
+<body>
+<p>მაგალითი 7:
+    const text = “Lorem ipsum dolor sit amet, consectetur adipiscing elit.”;
+    დაწერეთ პროგრამა, რომელიც გამოიტანს მოცემული ტექსტის სიტყვების პირველი ასოებისგან შემდგარ uppercase სტრიქონს (string).
+    პასუხი: “LIDSACAE”
+
+    მინიშნება: გამოიყენეთ .split მეთოდი სიტყვებად დაშლისთვის.
+</p>
+<script>
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+    const words = text.split(' ');
+    let ans="";
+    let word;
+    words.forEach(w => {
+        word=w.split('')
+        ans= ans + word[0];
+    })
+        document.writeln(ans.toUpperCase());
+        console.log(ans.toUpperCase());
+
+</script>
+</body>
+</html>
