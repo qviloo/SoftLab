@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6</title>
+</head>
+<body>
+<p>მაგალითი 6:
+    const numbers = [-2, 0, 6, 3, -11, 4, -5, 10, 11, -1, 7, 9];
+    .filter .map .reduce მეთოდების გამოყენებით დაწერეთ პროგრამა, რომელიც დაბეჭდავს (კონსოლში) ამ რიცხვების (ნულების გარდა) აბსოლუტური მნიშვნელობების (მოდულების) ნამრავლს.
+    პასუხი: 54885600
+
+
+
+</p>
+<script>
+    const numbers = [-2, 0, 6, 3, -11, 4, -5, 10, 11, -1, 7, 9];
+
+    let MUL=0;
+    numbers.filter(n => n !== 0).map(n=>Math. abs(n)).reduce((mul, n)=>{
+        MUL=mul*n;
+        return MUL;
+    })
+        document.writeln(MUL);
+        console.log(MUL);
+
+</script>
+</body>
+</html>
