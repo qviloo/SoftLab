@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 11</title>
+</head>
+<body>
+<p>მაგალითი 11:
+    დაწერეთ პროგრამა, რომელიც 1-დან 100-მდე რიცხვებში გაივლის ციკლს და დაბეჭდავს თითოეულ რიცხვს. თუ რიცხვი 3-ის ჯერადია რიცხვს მიაწერს Fizz-ს, თუ რიცხვი 5-ის ჯერადია, მიაწერს Buzz-ს, ხოლო თუ რიცხვი 3-ის ჯერადიცაა და 5-ის ჯერადიც მიაწერს FizzBuzz-ს.
+    პასუხი:
+    1
+    2
+    3 - Fizz
+    4
+    5 - Buzz
+    ....
+
+</p>
+<script>
+    for (let i=0; i<100; i++){
+        if (i % 3 ===0 && i % 5 ===0 ){
+            document.writeln(i +" - FizzBuzz"+"<br>");
+            console.log(i +" - FizzBuzz"+"<br>");
+        }
+        else if (i % 3 ===0){
+            document.writeln(i +" - Fizz"+"<br>");
+            console.log(i +" - Fizz"+"<br>");
+        }
+        else if (i % 5 ===0){
+            document.writeln(i +" - Buzz"+"<br>");
+            console.log(i +" - Buzz"+"<br>");
+        }
+        else  {
+            document.writeln(i + "<br>");
+            console.log(i +"<br>");
+        }
+
+    }
+
+</script>
+</body>
+</html>
