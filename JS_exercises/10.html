@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 10</title>
+</head>
+<body>
+<p>მაგალითი 10:
+    დაწერეთ პროგრამა, რომელიც 0-დან 15-მდე რიცხვებში გაივლის ციკლს და დაბეჭდავს თითოეული რიცხვი ლუწია თუ კენტი.
+    პასუხი:
+    0 არის ლუწი
+    1 არის კენტი
+    2 არის ლუწი
+    ....
+    ....
+</p>
+<script>
+    for (let i=0; i<15; i++){
+        if (i % 2 ===0){
+            document.writeln(i +" არის ლუწი"+"<br>");
+            console.log();
+        }
+        else if (i % 2 !==0){
+            document.writeln(i +" არის კენტი"+"<br>");
+            console.log();
+        }
+    }
+
+</script>
+</body>
+</html>
