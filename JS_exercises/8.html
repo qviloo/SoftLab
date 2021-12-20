@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Exercise 8</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, label, button {
+            padding: 10px;
+            width: 25%;
+        }
+
+    </style>
 </head>
 <body>
 <p>მაგალითი 8:
-    დაწერეთ ფუნქცია, რომელსაც გადაეცემა ორი რიცხვითი პარამეტრი და დააბრუნებს მათ შორის მაქსიმალურს. (Math.max() ფუნქციის გამოყენების გარეშე)
+    დაწერეთ ფუნქცია, რომელსაც გადაეცემა ორი რიცხვითი პარამეტრი და დააბრუნებს მათ შორის მაქსიმალურს. (Math.max() ფუნქციის
+    გამოყენების გარეშე)
 </p>
+
+<div>
+    <label for="num1">გთხოვთ შეიყვანოთ პირველი რიცხვი</label>
+    <input type="number" id="num1" required>
+</div>
+<div>
+    <label for="num2">გთხოვთ შეიყვანოთ მეორე რიცხვი</label>
+    <input type="number" id="num2" required>
+</div>
+
+<div id="button">
+    <button onclick="shedareba()">შედარება</button>
+
+</div>
+
 <script>
+    function shedareba() {
+        let ans = document.createElement("P");
+        let num1 = document.getElementById('num1').value;
+        num1 = parseFloat(num1);
+        let num2 = document.getElementById('num2').value;
+        num2 = parseFloat(num2);
 
-
+        if (num1 > num2) {
+            ans.innerText = "მაქსიმალურია: " + num1;
+            document.body.appendChild(ans);
+            console.log(num1);
+        } else if (num2 > num1) {
+            ans.innerText = "მაქსიმალურია: " + num2;
+            document.body.appendChild(ans);
+            console.log(num2);
+        } else {
+            ans.innerText = num1 + "=" + num2;
+            document.body.appendChild(ans);
+            console.log(num1 + "=" + num2);
+        }
+  }
 </script>
 </body>
 </html>
