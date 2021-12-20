@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 23</title>
+</head>
+<body>
+<p>მაგალითი 23:
+    setInterval() გამოყენებით დაწერეთ პროგრამა, რომელიც ყოველ 5 წამში ერთხელ კონსოლში დაბეჭდავს მიმინარე თარიღს (new Date()), 10-ჯერ დაბეჭდვის შემდეგ შეწყვეტს ბეჭდვას (გამოიყენეთ clearInterval())
+</p>
+<script>
+    const TimeInterval = setInterval(Hello, 5000);
+    let i=0;
+    function Hello() {
+
+            console.log(new Date());
+            i++;
+            if (i===10){clearInterval(TimeInterval)}
+
+    }
+</script>
+</body>
+</html>
