@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercise 9</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, label, button {
+            padding: 10px;
+            width: 25%;
+        }
+
+    </style>
 </head>
 <body>
 <p>მაგალითი 9:
-    დაწერეთ ფუნქცია, რომელსაც გადაეცემა რიცხვების მასივი და დააბრუნებს ამ მასივში მაქსიმალურ რიცხვს. (Math.max() ფუნქციის გამოყენების გარეშე)
+    დაწერეთ ფუნქცია, რომელსაც გადაეცემა რიცხვების მასივი და დააბრუნებს ამ მასივში მაქსიმალურ რიცხვს. (Math.max()
+    ფუნქციის გამოყენების გარეშე)
 
 </p>
+<div>
+    <label for="nums">გთხოვთ შეიყვანოთ რიცხვთა მასივი</label>
+    <input id="nums" required>
+</div>
+
+<div id="button">
+    <button onclick="shedareba()">შედარება</button>
+
+</div>
+
 <script>
+    function shedareba() {
+        let ans = document.createElement("P");
+        let nums = document.getElementById('nums').value;
+        let numebi = nums.split(',');
+        let max = numebi[0];
+        for (let i = 1; i <= numebi.length; i++) {
+            if (max < numebi[i]) {
+                max = numebi[i];
+            }
+        }
+        ans.innerText = max;
+        document.body.appendChild(ans);
+        console.log(ans);
 
-
+    }
 </script>
 </body>
 </html>
