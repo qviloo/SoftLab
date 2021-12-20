@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 13.1</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, label, button {
+            padding: 10px;
+            width: 25%;
+        }
+
+    </style>
+</head>
+<body>
+<p>მაგალითი 13.1:
+    დაწერეთ ფუნქცია, რომელსაც გადაეცემა ნატურალური რიცხვი და string-ების გამოყენების გარეშე დააბრუნებს რიცხვს, რომელიც
+    წარმოადგენს მოცემული რიცხვის ციფრების უკუ თანმიმდევრობით შედგენილ რიცხვს.
+    მაგ.: 123 -> 321, 250 -> 52 (გამოიყენეთ while ციკლი)
+
+</p>
+
+<div>
+    <label for="num">გთხოვთ შეიყვანოთ რიცხვი</label>
+    <input id="num" required type="number">
+</div>
+
+
+<div id="button">
+    <button onclick="shedareba()">ასინეთა</button>
+
+</div>
+
+<script>
+    function shedareba() {
+        let ans = document.createElement("P");
+        let num = document.getElementById('num').value;
+        num = parseInt(num);
+        let mun = 0;
+        while (num >= 10) {
+            mun = mun * 10 + num % 10;
+            num = parseInt(num / 10);
+        }
+        mun = mun * 10 + num % 10;
+
+
+        ans.innerText = mun.toString();
+        document.body.appendChild(ans);
+        console.log(mun);
+
+
+    }
+</script>
+</body>
+</html>
