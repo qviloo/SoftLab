@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 19</title>
+</head>
+<body>
+<p>მაგალითი 19:
+    const text = “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+
+    დაწერეთ პროგრამა, რომელიც replace მეთოდის გამოყენებით სიტყვებს dolor, elit, labore ჩაანაცვლებს XXX სიტყვით.
+    პასუხი: “Lorem ipsum XXX sit amet, consectetur adipiscing XXX, sed do eiusmod tempor incididunt ut XXX et XXXe magna aliqua.”
+
+
+</p>
+<script>
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+    let newText = text.replace(/dolor|elit|labore/gi, "XXX");
+
+        document.writeln(newText);
+        console.log(newText);
+
+</script>
+</body>
+</html>
