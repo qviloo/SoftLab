@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 20</title>
+</head>
+<body>
+<p>მაგალითი 20:
+    const urls = [
+    “https://www.facebook.com”,
+    “http://google.com”,
+    “mailto:example@gmail.com”
+    “tel:599999999”,
+    “invalid url”,
+    “ftp://ftp01.com/html/”,
+    “http://example.com”
+    ];
+
+    დაწერეთ პროგრამა, რომელიც გამოიტანს მხოლოდ იმ ელემენტებს, რომლებიც იწყება http-ით.
+    პასუხი:
+    “https://www.facebook.com”,
+    “http://google.com”,
+    “http://example.com”
+
+</p>
+<script>
+    const urls = [
+        "https://www.facebook.com",
+        "http://google.com",
+        "mailto:example@gmail.com",
+        "tel:599999999",
+        "invalid url",
+        "ftp://ftp01.com/html/",
+        "http://example.com"
+    ];
+    urls.filter(url => url.startsWith('http')).forEach(ur => {
+        document.writeln(ur + "<br>");
+        console.log(ur)
+    })
+
+</script>
+</body>
+</html>
