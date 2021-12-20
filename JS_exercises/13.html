@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 13</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, label, button {
+            padding: 10px;
+            width: 25%;
+        }
+
+    </style>
+</head>
+<body>
+<p>მაგალითი 13:
+    დაწერეთ ფუნქცია, რომელსაც გადაეცემა ნატურალური რიცხვი და დაბეჭდავს ამ რიცხვამდე (ჩათვლით) ყველა მარტივ რიცხვს
+    (მარტივი რიცხვი არის რიცხვი, რომელიც იყოფა მხოლოდ 1-ზე და თავის თავზე)
+</p>
+
+<div>
+    <label for="num">გთხოვთ შეიყვანოთ რიცხვი</label>
+    <input id="num" required type="number">
+</div>
+
+
+<div id="button">
+    <button onclick="shedareba()">მარტივები</button>
+
+</div>
+
+<script>
+    function shedareba() {
+        //let ans = document.createElement("P");
+        let num = document.getElementById('num').value;
+        num = parseFloat(num);
+
+        for (let i = 2; i <= num; i++) {
+            let p = 1;
+            for (let n = 2; n < i; n++) {
+                if (i % n === 0) {
+                    p = 0;
+                    break;
+                }
+            }
+                if (p===1){
+                    //ans.innerText = "martivia"+i;
+                    //document.body.appendChild(ans);
+                    console.log(i);
+                }
+
+
+
+        }
+    }
+</script>
+</body>
+</html>
